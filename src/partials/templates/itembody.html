@@ -1,0 +1,15 @@
+<div>
+	<header class="shell__header">
+		<div class="shell__rubric" ng-bind-html="instruction"/>
+		<div class="shell__hint">
+			<button class="button button--hint">Hint</button>
+			<div class="shell__hint-body">
+				<p>{{hint}}</p>
+			</div>
+		</div>
+	</header>
+
+	<section class="freetown activity_body" ng-transclude='parent'>
+		<!-- <div class='activity_body' ></div> -->
+	</section>
+</div>

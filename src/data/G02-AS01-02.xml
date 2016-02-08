@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://openmind.mecadmin.com/#/L1/U05/G02/AS01-02 -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="" title="" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+    <correctResponse>
+      <value>sac1 sac9</value>
+      <value>sac2 sac10</value>
+      <value>sac3 sac11</value>
+      <value>sac4 sac12</value>
+      <value>sac5 sac13</value>
+      <value>sac6 sac14</value>
+      <value>sac7 sac15</value>
+      <value>sac8 sac16</value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+  <itemBody class="layout100">
+    <rubricBlock>Look at the pictures. Do you know what they are? Drag the correct word to each picture.</rubricBlock>
+    <infoControl title="HINT">These words are used in the next activity. Listen to the audio definitions to check your answers.</infoControl>
+    <matchInteraction responseIdentifier="RESPONSE" maxAssociations="8" shuffle="false" class="qticarouselselect" >
+      <simpleMatchSet class="qticarousellist">
+        <simpleAssociableChoice identifier="sac1" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-1.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac2" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-2.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac3" matchMax="2" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-3.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac4" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-4.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac5" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-5.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac6" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-6.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac7" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-7.jpg"/>
+        </simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac8" matchMax="1" class="qticarouselitem">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-02-8.jpg"/>
+        </simpleAssociableChoice>
+      </simpleMatchSet>
+      <simpleMatchSet class="qticheckboxMS">
+        <simpleAssociableChoice identifier="sac9" matchMax="1" class="qticheckboxSAC">planetarium</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac10" matchMax="1" class="qticheckboxSAC">ticket</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac11" matchMax="1" class="qticheckboxSAC">alien</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac12" matchMax="1" class="qticheckboxSAC">festival</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac13" matchMax="1" class="qticheckboxSAC">costume</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac14" matchMax="1" class="qticheckboxSAC">astronomer</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac15" matchMax="1" class="qticheckboxSAC">competition</simpleAssociableChoice>
+        <simpleAssociableChoice identifier="sac16" matchMax="1" class="qticheckboxSAC">parade</simpleAssociableChoice>
+      </simpleMatchSet>
+    </matchInteraction>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

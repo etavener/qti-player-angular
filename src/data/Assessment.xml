@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1
+    http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" 
+    identifier="P3" title="Openmind">
+
+    <testPart identifier="test" navigationMode="linear" submissionMode="individual">
+    	<assessmentSection identifier="U5" title="Unit 5" visible="true">
+	    	<assessmentSection identifier="S02" title="Grammar 1" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 1" visible="true">
+	    			
+	    			<assessmentItemRef identifier="U5-G02-AS01-01" href="data/G02-AS01-01.xml" />
+
+	    			<assessmentItemRef identifier="U5-G02-AS01-02" href="data/G02-AS01-02.xml" />
+
+	    			<assessmentItemRef identifier="U5-G02-AS05-02" href="data/G02-AS05-02.xml" />
+	    				<!-- <preCondition>
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc2</baseValue>
+							</match>
+						</preCondition> -->
+	    			<!-- </assessmentItemRef> -->
+
+	    			<assessmentItemRef identifier="U5-G02-AS02-03" href="data/G02-AS02-03.xml">
+						<branchRule target="U5-G03-AS01-01">
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc1</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="U5-G03-AS01-02">
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc2</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="U5-G03-AS01-03">
+								<match>
+									<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+									<baseValue baseType="identifier">sc3</baseValue>
+								</match>
+								<match>
+									<variable identifier="U5-G02-AS01-01.RESPONSE2"/>
+									<baseValue baseType="identifier">sc3</baseValue>
+								</match>
+						</branchRule>
+	    			</assessmentItemRef>
+
+	    		</assessmentSection>
+	    	</assessmentSection>
+	    	<assessmentSection identifier="S03" title="Grammar 2" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 3" visible="true">
+	    			<assessmentItemRef identifier="U5-G03-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U5-G03-AS01-02" href="data/G02-AS01-02.xml"/>
+	    			<assessmentItemRef identifier="U5-G03-AS01-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+    	</assessmentSection>
+    	<assessmentSection identifier="U6" title="Unit 6" visible="true">
+	    	<assessmentSection identifier="S02" title="Grammar 1" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 1" visible="true">
+	    			<assessmentItemRef identifier="U6-G02-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U6-G02-AS01-02" href="data/G02-AS01-02.xml"/>
+	    		</assessmentSection>
+	    		<assessmentSection identifier="AS02" title="Language in context 2" visible="true">
+	    			<assessmentItemRef identifier="U6-G02-AS02-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+	    	<assessmentSection identifier="S03" title="Grammar 2" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 3" visible="true">
+	    			<assessmentItemRef identifier="U6-G03-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U6-G03-AS01-02" href="data/G02-AS01-02.xml"/>
+	    		</assessmentSection>
+	    		<assessmentSection identifier="AS02" title="Language in context 4" visible="true">
+	    			<assessmentItemRef identifier="U6-G03-AS02-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+    	</assessmentSection>
+    </testPart>
+
+
+     <testPart identifier="test" navigationMode="linear" submissionMode="individual">
+    	<assessmentSection identifier="U5" title="Unit 5" visible="true">
+	    	<assessmentSection identifier="S02" title="Grammar 1" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 1" visible="true">
+	    			
+	    			<assessmentItemRef identifier="U5-G02-AS01-01" href="data/G02-AS01-01.xml" />
+
+	    			<assessmentItemRef identifier="U5-G02-AS01-02" href="data/G02-AS01-02.xml" />
+
+	    			<assessmentItemRef identifier="U5-G02-AS05-02" href="data/G02-AS05-02.xml" />
+	    				<!-- <preCondition>
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc2</baseValue>
+							</match>
+						</preCondition> -->
+	    			<!-- </assessmentItemRef> -->
+
+	    			<assessmentItemRef identifier="U5-G02-AS02-03" href="data/G02-AS02-03.xml">
+						<branchRule target="U5-G03-AS01-01">
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc1</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="U5-G03-AS01-02">
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc2</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="U5-G03-AS01-03">
+							<match>
+								<variable identifier="U5-G02-AS01-01.RESPONSE1"/>
+								<baseValue baseType="identifier">sc3</baseValue>
+							</match>
+						</branchRule>
+	    			</assessmentItemRef>
+
+	    		</assessmentSection>
+	    	</assessmentSection>
+	    	<assessmentSection identifier="S03" title="Grammar 2" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 3" visible="true">
+	    			<assessmentItemRef identifier="U5-G03-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U5-G03-AS01-02" href="data/G02-AS01-02.xml"/>
+	    			<assessmentItemRef identifier="U5-G03-AS01-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+    	</assessmentSection>
+    	<assessmentSection identifier="U6" title="Unit 6" visible="true">
+	    	<assessmentSection identifier="S02" title="Grammar 1" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 1" visible="true">
+	    			<assessmentItemRef identifier="U6-G02-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U6-G02-AS01-02" href="data/G02-AS01-02.xml"/>
+	    		</assessmentSection>
+	    		<assessmentSection identifier="AS02" title="Language in context 2" visible="true">
+	    			<assessmentItemRef identifier="U6-G02-AS02-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+	    	<assessmentSection identifier="S03" title="Grammar 2" visible="true">
+	    		<assessmentSection identifier="AS01" title="Language in context 3" visible="true">
+	    			<assessmentItemRef identifier="U6-G03-AS01-01" href="data/G02-AS01-01.xml"/>
+	    			<assessmentItemRef identifier="U6-G03-AS01-02" href="data/G02-AS01-02.xml"/>
+	    		</assessmentSection>
+	    		<assessmentSection identifier="AS02" title="Language in context 4" visible="true">
+	    			<assessmentItemRef identifier="U6-G03-AS02-03" href="data/G02-AS02-03.xml"/>
+	    		</assessmentSection>
+	    	</assessmentSection>
+    	</assessmentSection>
+    </testPart>
+
+
+</assessmentTest>

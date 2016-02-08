@@ -1,0 +1,35 @@
+<div class="shell">
+	<nav class="shell__title-bar">
+		<a class="shell__title-bar-menu" href="#">
+			<svg class="mt__icon mt__icon--burger shell__title-bar-burger"><use xlink:href="/assets/svg/icons.svg#mt-icon-burger"></use></svg>
+			Menu
+		</a>
+		<ul>
+			<li class="shell__title-bar-breadcrumb-item" ng-repeat="title in titles track by $index">
+				{{title}}
+				<svg class="shell__title-bar-chevron mt__icon"><use xlink:href="/assets/svg/icons.svg#mt-icon-arrow-right"></use></svg>
+			</li>
+			<li class="shell__title-bar-breadcrumb-item">{{currentActivity}} of {{totalActivities}}</li>
+		</ul>
+		<a class="shell__title-bar-tools" href="#">
+			<svg class="mt__icon mt__icon--tools shell__title-bar-tools-icon"><use xlink:href="/assets/svg/icons.svg#mt-icon-tools"></use></svg>
+			Tools
+		</a>
+	</nav>
+			
+	<div ng-transclude='parent'></div>
+
+	<footer class="shell__footer">
+		<ul class="shell__secondary-buttons">
+			<li class="shell__footer-button">
+				<button class="button button--secondary" ng-click="back()" ng-disabled="backDisabled">Secondary</button>
+			</li>
+		</ul>
+		<ul class="shell__primary-buttons">
+			<li class="shell__footer-button">
+				<button class="button button--primary" ng-click="next()" ng-disabled="nextDisabled">Primary</button>
+			</li>
+		</ul>
+	</footer>
+
+</div>

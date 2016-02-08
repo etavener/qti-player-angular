@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1
+    http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" 
+    identifier="P3" title="Openmind">
+
+    <testPart identifier="test" navigationMode="linear" submissionMode="individual">
+    	<!-- default values -->
+    	<!-- <itemSessionControl maxAttempts="0" showFeedback="false" allowReview="true" showSolution="false"
+    		 allowSkipping="" validateResponses="" allowComment=""  /> -->
+    	<!-- macmillan values -->
+    	<itemSessionControl allowSkipping="true" validateResponses="true"  />
+
+    	<assessmentSection identifier="unit" title="Unit title" visible="true">
+	    	<assessmentSection identifier="module" title="module title" visible="true">
+	    		<!-- CHOICE INTERACTION WITH A RESPONSE -->
+	    		<assessmentSection identifier="topic-1" title="topic title" visible="true">
+	    			<assessmentItemRef identifier="SCREEN-01" href="data/branching_test/screen_1.xml">
+						<branchRule target="SCREEN-02A">
+							<match>
+								<variable identifier="SCREEN-01.RESPONSE"/>
+								<baseValue baseType="identifier">opta</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="SCREEN-02B">
+							<match>
+								<variable identifier="SCREEN-01.RESPONSE"/>
+								<baseValue baseType="identifier">optb</baseValue>
+							</match>
+						</branchRule>
+						<branchRule target="SCREEN-02C">
+							<match>
+								<variable identifier="SCREEN-01.RESPONSE"/>
+								<baseValue baseType="identifier">optc</baseValue>
+							</match>
+						</branchRule>
+	    			</assessmentItemRef>
+	    		</assessmentSection>
+
+	    		<!-- AT THIS POINT THE ACTIVITY BRANCHES ON RESPONSE (SEE PREVIOUS BRANCH RULES) -->
+	    		<assessmentSection identifier="topic-2A" title="topic title" visible="true">
+	    			<preCondition>
+						<match>
+							<variable identifier="SCREEN-01.RESPONSE"/>
+							<baseValue baseType="identifier">opta</baseValue>
+						</match>
+					</preCondition>
+	    			<assessmentItemRef identifier="SCREEN-02A" href="data/branching_test/screen_2a.xml" />
+	    			<assessmentItemRef identifier="SCREEN-02A-2" href="data/branching_test/screen_2a.xml" />
+	    		</assessmentSection>
+
+	    		<assessmentSection identifier="topic-2B" title="topic title" visible="true">
+	    			<preCondition>
+						<match>
+							<variable identifier="SCREEN-01.RESPONSE"/>
+							<baseValue baseType="identifier">optb</baseValue>
+						</match>
+					</preCondition>
+	    			<assessmentItemRef identifier="SCREEN-02B" href="data/branching_test/screen_2b.xml" />
+	    			<assessmentItemRef identifier="SCREEN-02B-2" href="data/branching_test/screen_2b.xml" />
+	    		</assessmentSection>
+
+	    		<assessmentSection identifier="topic-2C" title="topic title" visible="true">
+	    			<preCondition>
+						<match>
+							<variable identifier="SCREEN-01.RESPONSE"/>
+							<baseValue baseType="identifier">optc</baseValue>
+						</match>
+					</preCondition>
+	    			<assessmentItemRef identifier="SCREEN-02C" href="data/branching_test/screen_2c.xml" />
+	    			<assessmentItemRef identifier="SCREEN-02C-2" href="data/branching_test/screen_2c.xml" />
+	    		</assessmentSection>
+
+	    		<!-- NOW WE ARE ALL BACK ON THE SAME ACTIVITY SCREEN -->
+	    		<assessmentSection identifier="topic-3" title="topic title" visible="true">
+	    			<assessmentItemRef identifier="SCREEN-03" href="data/branching_test/screen_3.xml" />
+	    		</assessmentSection>
+
+	    	</assessmentSection>
+    	</assessmentSection>
+    </testPart>
+
+</assessmentTest>

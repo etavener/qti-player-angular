@@ -1,0 +1,9 @@
+<div>
+	<flex-slider class='carousel' slide='s in sliderImages track by $index' controlNav="true" animation="slide" slideshow="false">
+		<li identifier="{{s.identifier}}" matchmax="{{s.matchmax}}">
+			<img ng-src="{{s.src}}" >
+		</li>
+	</flex-slider>
+
+	<div class="imagesDisplay" ng-transclude='parent'></div>
+</div>

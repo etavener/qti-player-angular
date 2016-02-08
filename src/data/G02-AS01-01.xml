@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://openmind.mecadmin.com/#/L1/U05/G02/AS01-01 -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="" title="Assessment title" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE1" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value>sc2</value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="RESPONSE2" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value>sc2</value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+  <itemBody>
+    <rubricBlock>Look at the picture. What kind of a festival do you think it is? Choose the correct answer.</rubricBlock>
+    <infoControl title="HINT">A festival is an event that is held to celebrate a particular thing or activity.</infoControl>
+    <choiceInteraction responseIdentifier="RESPONSE1" shuffle="false" maxChoices="1" class="checkbox">
+      <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-01.jpg"></img>
+      <simpleChoice identifier="sc1" class="checkboxSC">
+        <span>A food festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc1" showHide="show">✘ incorrect</feedbackInline>
+      </simpleChoice>
+      <simpleChoice identifier="sc2" class="checkboxSC">
+        <span>A UFO festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc2" showHide="show">✔ correct</feedbackInline>
+      </simpleChoice>
+      <simpleChoice identifier="sc3" class="checkboxSC">
+        <span>A music festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc3" showHide="show">✘ incorrect</feedbackInline>
+      </simpleChoice>
+    </choiceInteraction>
+    <choiceInteraction responseIdentifier="RESPONSE2" shuffle="false" maxChoices="1" class="dropdown">
+      <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-01.jpg"></img>
+      <simpleChoice identifier="sc1" class="dropdownSC">
+        <span>A food festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc1" showHide="show">✘ incorrect</feedbackInline>
+      </simpleChoice>
+      <simpleChoice identifier="sc2" class="dropdownSC">
+        <span>A UFO festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc2" showHide="show">✔ correct</feedbackInline>
+      </simpleChoice>
+      <simpleChoice identifier="sc3" class="dropdownSC">
+        <span>A music festival</span>
+        <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc3" showHide="show">✘ incorrect</feedbackInline>
+      </simpleChoice>
+    </choiceInteraction>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct">
+    <setOutcomeValue identifier="FEEDBACK">
+      <variable identifier="RESPONSE"/>
+    </setOutcomeValue>
+  </responseProcessing>
+</assessmentItem>

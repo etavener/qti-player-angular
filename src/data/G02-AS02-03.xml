@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://openmind.mecadmin.com/#/L1/U05/G02/AS02-03 -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="" title="" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+    <defaultValue>
+      <value>8</value>
+    </defaultValue>
+  </outcomeDeclaration>
+  <outcomeDeclaration identifier="PASSED" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+  <itemBody class="layout_standard" >
+    <rubricBlock view="candidate">Scan the text again. Then click on the phrases that talk about quantity.</rubricBlock>
+    <hottextInteraction responseIdentifier="RESPONSE-1" maxChoices="8" class="qtidiv">
+      <ul class="conversation">
+        <li class="conversationitem ltr">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS02-avatar-helen.png"/>
+          <span>Helen</span>
+          <p>
+            <hottext identifier="w1">I'm from Canada, and I'm travelling in the southwest USA.</hottext>
+            <hottext identifier="ht1">Are there any interesting festivals</hottext>
+            <hottext identifier="w2">in this area this month? Is there a festival in Arizona? I'm in Phoenix at the moment.</hottext>
+          </p>
+        </li>
+        <li class="conversationitem rtl">
+          <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS02-avatar-jan.png"/>
+          <span>Jan</span>
+          <p>
+            <hottext identifier="ht3">There aren't any festivals</hottext> <hottext identifier="w3">in Arizona this month, but there is a great festival in Roswell, New Mexico. It's called the UFO Festival, and it's all about UFOs and aliens!</hottext> <hottext identifier="ht5">There are a lot of different types</hottext> <hottext identifier="w4">of events. For example,</hottext> <hottext identifier="ht6">there are several planetarium shows and</hottext> <hottext identifier="ht7">there are some talks</hottext> <hottext identifier="w5">by astronomers and other scientists.</hottext> <hottext identifier="ht8">There aren't many tickets</hottext> <hottext identifier="w6">for these talks, so it's a good idea to buy them online as soon as possible. There's an alien costume competition, and</hottext> <hottext identifier="ht10">there are many contestants</hottext> <hottext identifier="w7">with really crazy costumes!</hottext> <hottext identifier="ht11">There's also an alien parade</hottext>. <hottext identifier="w8">Believe me, there isn't another festival like the UFO Festival!</hottext>
+          </p>
+        </li>
+      </ul>
+    </hottextInteraction>
+    <ul class="conversation">
+      <li class="conversationitem ltr">
+        <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS02-avatar-helen.png"/>
+        <span>Helen</span>
+        <p>
+          <choiceInteraction responseIdentifier="RESPONSE-2" shuffle="false" maxChoices="1" class="checkbox">
+            <prompt>
+              <span>What kind of a festival do you think it is? Choose the correct answer from the options.</span>
+              <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-01.jpg"></img>
+            </prompt>
+            <simpleChoice identifier="sc1" class="checkboxSC">
+              <span>A food festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc1" showHide="show">✘ incorrect</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="sc2" class="checkboxSC">
+              <span>A UFO festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc2" showHide="show">✔ correct</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="sc3" class="checkboxSC">
+              <span>A music festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc3" showHide="show">✘ incorrect</feedbackInline>
+            </simpleChoice>
+          </choiceInteraction>
+        </p>
+      </li>
+      <li class="conversationitem rtl">
+        <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS02-avatar-jan.png"/>
+        <span>Jan</span>
+        <p>
+          <choiceInteraction responseIdentifier="RESPONSE-3" shuffle="false" maxChoices="1" class="dropdown">
+            <prompt>
+              <span>What kind of a festival do you think it is? Choose the correct answer from the dropdown.</span>
+              <img alt="" src="http://openmind.mecadmin.com/assets/images/U05-G02-AS01-01.jpg"></img>
+            </prompt>
+            <simpleChoice identifier="sc1" class="dropdownSC">
+              <span>A food festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc1" showHide="show">✘ incorrect</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="sc2" class="dropdownSC">
+              <span>A UFO festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc2" showHide="show">✔ correct</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="sc3" class="dropdownSC">
+              <span>A music festival</span>
+              <feedbackInline outcomeIdentifier="FEEDBACK" identifier="sc3" showHide="show">✘ incorrect</feedbackInline>
+            </simpleChoice>
+          </choiceInteraction>
+        </p>
+      </li>
+    </ul>
+    
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <isNull>
+          <variable identifier="RESPONSE"/>
+        </isNull>
+        <setOutcomeValue identifier="SCORE">
+          <baseValue baseType="float">0.0</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+      <responseElse>
+        <setOutcomeValue identifier="SCORE">
+          <mapResponse identifier="RESPONSE"/>
+        </setOutcomeValue>
+      </responseElse>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <equal toleranceMode="exact">
+          <variable identifier="SCORE"/>
+          <variable identifier="MAXSCORE"/>
+        </equal>
+        <setOutcomeValue identifier="PASSED">
+          <baseValue baseType="identifier">true</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+      <responseElse>
+        <setOutcomeValue identifier="PASSED">
+          <baseValue baseType="identifier">false</baseValue>
+        </setOutcomeValue>
+      </responseElse>
+    </responseCondition>
+  </responseProcessing>
+  <modalFeedback outcomeIdentifier="PASSED" identifier="false" showHide="show">
+    <strong>
+      You found <printedVariable identifier="SCORE"/> phrases
+    </strong>
+    <p>The phrases you missed are in green</p>
+  </modalFeedback>
+  <modalFeedback outcomeIdentifier="PASSED" identifier="true" showHide="show">
+    <strong>Well done!</strong>
+    <p>You have found all the phrases</p>
+  </modalFeedback>
+</assessmentItem>

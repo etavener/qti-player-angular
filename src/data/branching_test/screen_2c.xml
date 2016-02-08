@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://openmind.mecadmin.com/#/L1/U05/G02/AS01-01 -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="" title="Screen 2 C" adaptive="false" timeDependent="false">
+  <itemBody>
+    <rubricBlock>This is a test branching Acitivity.</rubricBlock>
+    <infoControl title="HINT">Test hint for branching.</infoControl>
+    <p>THIS IS SCREEN 2 C. Is that what you selected</p>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct">
+  </responseProcessing>
+</assessmentItem>

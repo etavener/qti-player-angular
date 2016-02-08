@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="" title="" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+	    <correctResponse>
+	      <value>sc2</value>
+	    </correctResponse>
+  	</responseDeclaration>
+
+  	<responseDeclaration identifier="R1" cardinality="single" baseType="identifier">
+  		<correctResponse>
+	      <value>yes</value>
+	    </correctResponse>
+  	</responseDeclaration>
+  	<responseDeclaration identifier="R2" cardinality="single" baseType="identifier">
+  		<correctResponse>
+	      <value>yes</value>
+	    </correctResponse>
+  	</responseDeclaration>
+  	<responseDeclaration identifier="R3" cardinality="single" baseType="identifier">
+  		<correctResponse>
+	      <value>yes</value>
+	    </correctResponse>
+  	</responseDeclaration>
+  	<responseDeclaration identifier="R4" cardinality="single" baseType="identifier">
+  		<correctResponse>
+	      <value>yes</value>
+	    </correctResponse>
+  	</responseDeclaration>
+
+	<itemBody>
+		<rubricBlock view="candidate">
+	    	<div>Describe a festival in your city or country. Complete the sentences below.</div>
+	    </rubricBlock>
+
+	    <infoControl title="HINT">Watch the video again to help you.</infoControl>
+
+	    <div>
+
+	    <ul class="textentryinteractions">
+			<li class='textentrycontent'>It's a <textEntryInteraction class="inputfield" responseIdentifier="R1" /> festival </li>
+			<li class='textentrycontent'>It's held in <textEntryInteraction class="inputfield" responseIdentifier="R2" /> </li>
+			<li class='textentrycontent'>There’s <textEntryInteraction class="inputfield" responseIdentifier="R3" /> </li>
+			<li class='textentrycontent'>There are <textEntryInteraction class="inputfield" responseIdentifier="R4" /> </li>
+		</ul>
+
+		<mediaInteraction responseIdentifier="RESPONSE" autostart="true">
+      		<object data="http://openmind.mecadmin.com/assets/video/OM-BELT-L1-U05-G02-AS03-01.mp4" type="video/mp4" width="271" height="136" />
+    	</mediaInteraction>
+
+    	</div>
+	</itemBody>
+
+
+</assessmentItem>
