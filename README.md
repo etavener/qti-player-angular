@@ -1,5 +1,5 @@
 # qti-player-angular
-An R+D to render QTI XML using Angular Directives.
+Using Angular directives to render QTI XML files
 
 
 We decided to progress with a Polymer approach using ShadowDOM
